@@ -1,115 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login Page</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
+    <meta charset="UTF-8">
+    <title>CIT Login Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-    body {
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: linear-gradient(135deg, #6a11cb, #2575fc);
-    }
+        .login-container {
+            background: #ffffff;
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            width: 100%;
+            max-width: 400px;
+        }
 
-    .login-container {
-      background: #fff;
-      padding: 40px;
-      border-radius: 12px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.2);
-      width: 100%;
-      max-width: 350px;
-    }
+        .logo {
+            width: 100px;
+            height: auto;
+            margin-bottom: 15px;
+        }
 
-    .login-container h2 {
-      text-align: center;
-      margin-bottom: 24px;
-      color: #333;
-    }
+        .login-container h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
 
-    .input-group {
-      margin-bottom: 18px;
-    }
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+        }
 
-    .input-group label {
-      display: block;
-      margin-bottom: 6px;
-      font-size: 14px;
-      color: #444;
-    }
+        .login-container button {
+            width: 100%;
+            padding: 12px;
+            background-color: #00529B;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background 0.3s ease;
+        }
 
-    .input-group input {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      outline: none;
-      transition: 0.3s;
-    }
+        .login-container button:hover {
+            background-color: #003f7f;
+        }
 
-    .input-group input:focus {
-      border-color: #2575fc;
-      box-shadow: 0 0 5px rgba(37,117,252,0.4);
-    }
-
-    .login-btn {
-      width: 100%;
-      padding: 12px;
-      background: #2575fc;
-      border: none;
-      color: #fff;
-      font-size: 16px;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    .login-btn:hover {
-      background: #1b5edb;
-    }
-
-    .extra-links {
-      text-align: center;
-      margin-top: 16px;
-      font-size: 14px;
-    }
-
-    .extra-links a {
-      color: #2575fc;
-      text-decoration: none;
-    }
-
-    .extra-links a:hover {
-      text-decoration: underline;
-    }
-  </style>
+        .footer-text {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
 </head>
 <body>
-  <div class="login-container">
-    <h2>Login</h2>
-    <form>
-      <div class="input-group">
-        <label for="email">Email</label>
-        <input type="email" id="email" placeholder="Enter your email" required>
-      </div>
-      <div class="input-group">
-        <label for="password">Password</label>
-        <input type="password" id="password" placeholder="Enter your password" required>
-      </div>
-      <button type="submit" class="login-btn">Login</button>
-      <div class="extra-links">
-        <p><a href="#">Forgot Password?</a></p>
-        <p>Don't have an account? <a href="#">Sign Up</a></p>
-      </div>
-    </form>
-  </div>
+    <div class="login-container">
+        <img src="citlogo.jpg" alt="CIT Logo" class="logo">
+        <h2>Login to Your Account</h2>
+        <form action="/login" method="post">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+        <p class="footer-text">© 2025 Coimbatore Institute of Technology</p>
+    </div>
 </body>
 </html>
